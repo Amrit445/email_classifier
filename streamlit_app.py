@@ -50,4 +50,11 @@ def transform_text(text):
 
 
 spam_data['transformed_text']=spam_data['text'].apply(transform_text)
-spam_data
+
+from sklearn.feature_extraction.text import CountVectorizer,TfidfVectorizer
+cv = CountVectorizer()
+tfidf = TfidfVectorizer(max_features=3000)
+
+X = tfidf.fit_transform(spam_data['transformed_text']).toarray()
+
+st.write(X.shape)
