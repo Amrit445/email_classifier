@@ -2,6 +2,9 @@ import streamlit as st
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 import nltk
+import string
+from nltk.stem.porter import PorterStemmer
+ps = PorterStemmer()
 nltk.download('punkt_tab')
 nltk.download('stopwords')
 from nltk.corpus import stopwords
