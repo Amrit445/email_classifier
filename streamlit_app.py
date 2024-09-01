@@ -1,13 +1,12 @@
 import streamlit as st
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
-import nltk
 import string
-from nltk.stem.porter import PorterStemmer
-ps = PorterStemmer()
-nltk.download('punkt_tab')
-nltk.download('stopwords')
 from nltk.corpus import stopwords
+import nltk
+from nltk.stem.porter import PorterStemmer
+
+ps = PorterStemmer()
 
 spam_data=pd.read_csv('https://raw.githubusercontent.com/Amrit445/email_classifier/master/spam.csv')
 
@@ -49,4 +48,4 @@ def transform_text(text):
 
     return " ".join(y)
 
-print(transform_text("I'm gonna be home soon and i don't want to talk about this stuff anymore tonight ,k? I've cried enough today."))
+st.write(transform_text("I'm gonna be home soon and i don't want to talk about this stuff anymore tonight ,k? I've cried enough today."))
