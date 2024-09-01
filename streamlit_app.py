@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
-import nlkt
+import nltk
 
 spam_data=pd.read_csv('https://raw.githubusercontent.com/Amrit445/email_classifier/master/spam.csv')
 
