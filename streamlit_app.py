@@ -1,5 +1,5 @@
 import streamlit as st
 
-st.title('🎈 App Name')
+st.title('E-MAIL SPAM DETECTION')
 
-st.write('Hello world!')
+st.write('Input your e-mail here ')
