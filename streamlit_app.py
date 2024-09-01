@@ -43,3 +43,4 @@ def transform_text(text):
 
     return " ".join(y)
 
+print(transform_text("I'm gonna be home soon and i don't want to talk about this stuff anymore tonight ,k? I've cried enough today."))
