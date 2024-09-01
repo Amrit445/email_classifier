@@ -48,4 +48,6 @@ def transform_text(text):
 
     return " ".join(y)
 
-st.write(transform_text("I'm gonna be home soon and i don't want to talk about this stuff anymore tonight ,k? I've cried enough today."))
+
+spam_data['transformed_text']=spam_data['text'].apply(transform_text)
+spam_data
