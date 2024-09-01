@@ -85,7 +85,7 @@ if st.button('Predict'):
     result = mnb.predict(vector_input)[0]
     # 4. Display
     if result == 1:
-        st.header("Spam")
+        st.header("It is a Spam Message")
     else:
-        st.header("Not Spam")
+        st.header("It is Not a Spam Message")
 
