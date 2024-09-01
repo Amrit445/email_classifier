@@ -57,4 +57,19 @@ tfidf = TfidfVectorizer(max_features=3000)
 
 X = tfidf.fit_transform(spam_data['transformed_text']).toarray()
 
-st.write(X.shape)
+y = spam_data['target'].values
+
+from sklearn.model_selection import train_test_split
+
+X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.2,random_state=2)
+
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.metrics import accuracy_score,confusion_matrix,precision_score
+
+mnb = MultinomialNB()
+
+mnb.fit(X_train,y_train)
+y_pred1 = mnb.predict(X_test)
+st.write(accuracy_score(y_test,y_pred1))
+st.write(confusion_matrix(y_test,y_pred1))
+st.write(precision_score(y_test,y_pred1))
