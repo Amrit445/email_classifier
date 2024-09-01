@@ -12,5 +12,5 @@ spam_data['target']=encoder.fit_transform(spam_data['target'])
 
 spam_data=spam_data.drop_duplicates(keep='first')
 
-spam_data['num_characters']=spam-data['text'].apply(len)
+spam_data['num_characters']=spam_data['text'].apply(len)
 spam_data
