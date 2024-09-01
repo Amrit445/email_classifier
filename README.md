@@ -1,9 +1,7 @@
-# 📦 Streamlit App Starter Kit 
-```
-⬆️ (Replace above with your app's name)
-```
+ML Project to classify emails into spam or not spam
 
-Description of the app ...
+
+App Link - ('https://emailclassifier-6rydm6n3bwaqwuvvyd9psl.streamlit.app/')
 
 ## Demo App
 
